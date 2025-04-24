@@ -73,7 +73,7 @@ $$\hat{β} = (X^T X)^{-1}X^T y$$
 以下は、2次元分類問題の例である。\
 (青色=0, オレンジ=1)として、線形回帰分析による直線を当てはめている。\
 決定境界は$x^T \hat{β}=0.5$となる直線である。\
-<img width="500" src="./ESL_linearFig.png">
+<img width="500" src=./ESL_linearFig.png>
 
 ---
 
@@ -87,7 +87,7 @@ $$\hat{Y} (x) = \frac{1}{k} \sum_{x_i \in N_k(x)} y_i$$
 
 - **ボロノイ分割(Voronoi Split)** … 各点の周囲のその点が最も近い点となる領域を図示したもの。\
  隣り合う点の間を結ぶ直線に対して、垂直二等分線を引くことで図示できる。\
-<img width="500" src="./VoronoiSplits.png">
+<img width="500" src=./VoronoiSplits.png>
 
 ---
 
@@ -100,7 +100,7 @@ $$\hat{Y} (x) = \frac{1}{k} \sum_{x_i \in N_k(x)} y_i$$
 以下は、2次元分類問題の例である。\
 (青色=0, オレンジ=1)として、15最近傍法によるクラスの予測を行った。\
 $\hat{Y} \leq 0.5$なら青色のクラス、それ以外はオレンジのクラスに分類した。\
-<img width="500" src="./ESL_NearestFig.png">
+<img width="500" src=./ESL_NearestFig.png>
 
 ---
 
@@ -188,9 +188,10 @@ $$\hat{G} (X) = \mathcal{G}_k 　 if 　 Pr(\mathcal{G}_k | X = x) = \underset{g
 
 ---
 
-**バイアス-分散問題(bias-variance decomposition)** … 平均2乗誤差を分散とバイアスの2乗に分解する方法。\
-
-
+**バイアス-分散問題(bias-variance decomposition)** … 平均2乗誤差(MSE)を分散とバイアスの2乗に分解する方法。\
+平均2乗誤差を減らすことで、誤分類を減らすことができるので、分割したバイアスと分散を小さくすることで誤差を減らし、予測精度を高めることができる。
+しかし、バイアスの低減を追求してモデルを複雑化しすぎると、訓練データにか適合してしまう問題も知られており、これを**バイアス-分散トレードオフ(Bias-variance Tradeoff)** という。
+$$MSE(x_0) = V(\hat{y_0}) + Bias^2(\hat{y_0})$$
 
 ---
 
@@ -208,4 +209,6 @@ https://qiita.com/supbon2/items/30e0cb49c9338e721b8c
 
 --- 
 
-[] 
+[4] バイアス・バリアンス分解の解説 #統計学 - Qiita
+(参照:2025/04/24)
+https://qiita.com/taiga518/items/92e6e65046eceed84dbd
